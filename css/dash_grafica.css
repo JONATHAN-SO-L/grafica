@@ -1,0 +1,44 @@
+body {
+	background-color: gray;
+}
+
+.titulo {
+	color: white;
+	text-align: center;
+	font-size: 40px;
+}
+
+#contenedor {
+	width: auto;
+	height: auto;
+	margin: 0 auto;
+}
+
+/* Diseño de los enlaces */
+a {
+	color: white;  /* Color del texto de los enlaces */
+}
+
+/* Diseño de la acción del puntero sobre los enlaces */
+a:hover {
+	color: white;  /* Color del texto de los enlaces cuando el puntero está sobre el mismo */
+}
+
+/* Diseño del pie de página */
+.pie3 {
+    background-color: #3E2A75;  /* Color del fondo */
+}
+
+/* Diseño de la imagen de redireccionamiento al sitio apps.jw.rog */
+#apps {
+    height: 40px;  
+    width: 40px;
+    margin-right: 5px;
+}
+
+/* Diseño del texto del pie de página */
+#foot{
+    color: white;   /* Color del texto */
+    font-style: bold;   /* Estilo de la letra (Negritas) */
+    font-size: 15px;    /* Tamaño de la letra */
+}
