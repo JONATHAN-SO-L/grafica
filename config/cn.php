@@ -7,3 +7,5 @@
 		die("Conection Failed: ".$connect_errno);
 
 	}
+
+?>
