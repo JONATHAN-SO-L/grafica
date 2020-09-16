@@ -1,16 +1,3 @@
-var caracter, opcion;
-
-$.ajax ({
-	url: "grafica.php",
-	type: "POST",
-	datatype: "json",
-	succes: function (jan) {
-		//opcion.series[0].data = jan;
-		//caracter = new Highcharts.chart(opcion);
-		console.log(jan);
-	}
-});
-
 Highcharts.chart('contenedor', {
 	chart: {
 		type: 'column'
@@ -57,23 +44,25 @@ Highcharts.chart('contenedor', {
 	},
 	series: [{
 		name: 'Publicaciones',
-		data: [35, 45, 65, 35, 25, 16, 15, 65, 35, 43, 26, 46],
+		data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 	}, {
 		name: 'Videos',
-		data: [35, 45, 65, 35, 25, 16, 15, 65, 35, 43, 26, 46]
+		data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 	}, {
 		name: 'Horas',
-		data: [70, 12, 4, 35, 75, 95, 1, 64, 42, 43, 26, 7]
+		data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 	}, {
 		name: 'Revisitas',
-		data: [35, 45, 65, 35, 25, 16, 15, 65, 35, 43, 26, 46]
+		data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 	},{
 		name: 'Cursos',
-		data: [35, 45, 65, 35, 25, 16, 15, 65, 35, 43, 26, 46]
+		data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 	}]
 });
+
+console.log("Función correcta");
