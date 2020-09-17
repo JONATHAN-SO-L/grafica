@@ -49,33 +49,137 @@
 
 	include "cn.php";
 
-	$data_jan = mysqli_query ($conexion, "SELECT * FROM enero");
-	$data_feb = mysqli_query ($conexion, "SELECT * FROM febrero");
-	$data_mar = mysqli_query ($conexion, "SELECT * FROM marzo");
-	$data_apr = mysqli_query ($conexion, "SELECT * FROM abril");
-	$data_may = mysqli_query ($conexion, "SELECT * FROM mayo");
-	$data_jun = mysqli_query ($conexion, "SELECT * FROM junio");
-	$data_jul = mysqli_query ($conexion, "SELECT * FROM julio");
-	$data_ago = mysqli_query ($conexion, "SELECT * FROM agosto");
-	$data_sep = mysqli_query ($conexion, "SELECT * FROM septiembre");
-	$data_oct = mysqli_query ($conexion, "SELECT * FROM octubre");
-	$data_nov = mysqli_query ($conexion, "SELECT * FROM noviembre");
-	$data_dic = mysqli_query ($conexion, "SELECT * FROM diciembre");
+	// Publicaciones
+	$pubs_jan = mysqli_query ($conexion, "SELECT publicaciones FROM enero");
+	$pubs_feb = mysqli_query ($conexion, "SELECT publicaciones FROM febrero");
+	$pubs_mar = mysqli_query ($conexion, "SELECT publicaciones FROM marzo");
+	$pubs_apr = mysqli_query ($conexion, "SELECT publicaciones FROM abril");
+	$pubs_may = mysqli_query ($conexion, "SELECT publicaciones FROM mayo");
+	$pubs_jun = mysqli_query ($conexion, "SELECT publicaciones FROM junio");
+	$pubs_jul = mysqli_query ($conexion, "SELECT publicaciones FROM julio");
+	$pubs_ago = mysqli_query ($conexion, "SELECT publicaciones FROM agosto");
+	$pubs_sep = mysqli_query ($conexion, "SELECT publicaciones FROM septiembre");
+	$pubs_oct = mysqli_query ($conexion, "SELECT publicaciones FROM octubre");
+	$pubs_nov = mysqli_query ($conexion, "SELECT publicaciones FROM noviembre");
+	$pubs_dic = mysqli_query ($conexion, "SELECT publicaciones FROM diciembre");
 
-	$jan = mysqli_fetch_array($data_jan);
-	$feb = mysqli_fetch_array($data_feb);
-	$mar = mysqli_fetch_array($data_mar);
-	$apr = mysqli_fetch_array($data_apr);
-	$may = mysqli_fetch_array($data_may);
-	$jun = mysqli_fetch_array($data_jun);
-	$jul = mysqli_fetch_array($data_jul);
-	$ago = mysqli_fetch_array($data_ago);
-	$sep = mysqli_fetch_array($data_sep);
-	$oct = mysqli_fetch_array($data_oct);
-	$nov = mysqli_fetch_array($data_nov);
-	$dic = mysqli_fetch_array($data_dic);
+	// Videos
+	$vids_jan = mysqli_query ($conexion, "SELECT videos FROM enero");
+	$vids_feb = mysqli_query ($conexion, "SELECT videos FROM febrero");
+	$vids_mar = mysqli_query ($conexion, "SELECT videos FROM marzo");
+	$vids_apr = mysqli_query ($conexion, "SELECT videos FROM abril");
+	$vids_may = mysqli_query ($conexion, "SELECT videos FROM mayo");
+	$vids_jun = mysqli_query ($conexion, "SELECT videos FROM junio");
+	$vids_jul = mysqli_query ($conexion, "SELECT videos FROM julio");
+	$vids_ago = mysqli_query ($conexion, "SELECT videos FROM agosto");
+	$vids_sep = mysqli_query ($conexion, "SELECT videos FROM septiembre");
+	$vids_oct = mysqli_query ($conexion, "SELECT videos FROM octubre");
+	$vids_nov = mysqli_query ($conexion, "SELECT videos FROM noviembre");
+	$vids_dic = mysqli_query ($conexion, "SELECT videos FROM diciembre");
+
+	// Horas
+	$horas_jan = mysqli_query ($conexion, "SELECT horas FROM enero");
+	$horas_feb = mysqli_query ($conexion, "SELECT horas FROM febrero");
+	$horas_mar = mysqli_query ($conexion, "SELECT horas FROM marzo");
+	$horas_apr = mysqli_query ($conexion, "SELECT horas FROM abril");
+	$horas_may = mysqli_query ($conexion, "SELECT horas FROM mayo");
+	$horas_jun = mysqli_query ($conexion, "SELECT horas FROM junio");
+	$horas_jul = mysqli_query ($conexion, "SELECT horas FROM julio");
+	$horas_ago = mysqli_query ($conexion, "SELECT horas FROM agosto");
+	$horas_sep = mysqli_query ($conexion, "SELECT horas FROM septiembre");
+	$horas_oct = mysqli_query ($conexion, "SELECT horas FROM octubre");
+	$horas_nov = mysqli_query ($conexion, "SELECT horas FROM noviembre");
+	$horas_dic = mysqli_query ($conexion, "SELECT horas FROM diciembre");
+
+	// Revisitas
+	$revs_jan = mysqli_query ($conexion, "SELECT revisitas FROM enero");
+	$revs_feb = mysqli_query ($conexion, "SELECT revisitas FROM febrero");
+	$revs_mar = mysqli_query ($conexion, "SELECT revisitas FROM marzo");
+	$revs_apr = mysqli_query ($conexion, "SELECT revisitas FROM abril");
+	$revs_may = mysqli_query ($conexion, "SELECT revisitas FROM mayo");
+	$revs_jun = mysqli_query ($conexion, "SELECT revisitas FROM junio");
+	$revs_jul = mysqli_query ($conexion, "SELECT revisitas FROM julio");
+	$revs_ago = mysqli_query ($conexion, "SELECT revisitas FROM agosto");
+	$revs_sep = mysqli_query ($conexion, "SELECT revisitas FROM septiembre");
+	$revs_oct = mysqli_query ($conexion, "SELECT revisitas FROM octubre");
+	$revs_nov = mysqli_query ($conexion, "SELECT revisitas FROM noviembre");
+	$revs_dic = mysqli_query ($conexion, "SELECT revisitas FROM diciembre");
+
+	// Cursos
+	$cbs_jan = mysqli_query ($conexion, "SELECT cursos FROM enero");
+	$cbs_feb = mysqli_query ($conexion, "SELECT cursos FROM febrero");
+	$cbs_mar = mysqli_query ($conexion, "SELECT cursos FROM marzo");
+	$cbs_apr = mysqli_query ($conexion, "SELECT cursos FROM abril");
+	$cbs_may = mysqli_query ($conexion, "SELECT cursos FROM mayo");
+	$cbs_jun = mysqli_query ($conexion, "SELECT cursos FROM junio");
+	$cbs_jul = mysqli_query ($conexion, "SELECT cursos FROM julio");
+	$cbs_ago = mysqli_query ($conexion, "SELECT cursos FROM agosto");
+	$cbs_sep = mysqli_query ($conexion, "SELECT cursos FROM septiembre");
+	$cbs_oct = mysqli_query ($conexion, "SELECT cursos FROM octubre");
+	$cbs_nov = mysqli_query ($conexion, "SELECT cursos FROM noviembre");
+	$cbs_dic = mysqli_query ($conexion, "SELECT cursos FROM diciembre");
 
 	include "cl.php";
+
+	while ($jan = mysqli_fetch_array($pubs_jan)) {
+		print_r($jan);
+		echo "<br>";
+	}
+
+	while ($feb = mysqli_fetch_array($pubs_feb)) {
+		print_r($feb);
+		echo "<br>";
+	}
+
+	while ($mar = mysqli_fetch_array($pubs_mar)) {
+		print_r($mar);
+		echo "<br>";
+	}
+
+	while ($apr = mysqli_fetch_array($pubs_apr)) {
+		print_r($apr);
+		echo "<br>";
+	}
+
+	while ($may = mysqli_fetch_array($pubs_may)) {
+		print_r($may);
+		echo "<br>";
+	}
+
+	while ($jun = mysqli_fetch_array($pubs_jun)) {
+		print_r($jun);
+		echo "<br>";
+	}
+
+	while ($jul = mysqli_fetch_array($pubs_jul)) {
+		print_r($jul);
+		echo "<br>";
+	}
+
+	while ($ago = mysqli_fetch_array($pubs_ago)) {
+		print_r($ago);
+		echo "<br>";
+	}
+
+	while ($sep = mysqli_fetch_array($pubs_sep)) {
+		print_r($sep);
+		echo "<br>";
+	}
+
+	while ($oct = mysqli_fetch_array($pubs_oct)) {
+		print_r($oct);
+		echo "<br>";
+	}
+
+	while ($nov = mysqli_fetch_array($pubs_nov)) {
+		print_r($nov);
+		echo "<br>";
+	}
+
+	while ($dic = mysqli_fetch_array($pubs_dic)) {
+		print_r($dic);
+		echo "<br><br>";
+	}
 
 	?>
 
@@ -129,14 +233,11 @@
 			},
 			series: [{
 				name: 'Publicaciones',
-				data: <?php while ($jan = mysqli_fetch_array($data_jan)) {
-					echo "['".$jan["publicaciones"]."']";
-				}
-				?>
+				data: [11,12,13,14,15,16,17,18,19,20,21,22]
 
 			}, {
 				name: 'Videos',
-				data: [11,12,13,14,15,16,17,18,19,20,21,22]
+				data: [22,21,20,19,18,17,16,15,14,13,12,11]
 
 			}, {
 				name: 'Horas',
@@ -144,7 +245,7 @@
 
 			}, {
 				name: 'Revisitas',
-				data: [11,12,13,14,15,16,17,18,19,20,21,22]
+				data: [22,21,20,19,18,17,16,15,14,13,12,11]
 
 			},{
 				name: 'Cursos',
@@ -154,13 +255,14 @@
 		});
 
 		console.log("Función correcta");
+
 	</script>
 
 	<br><br>
 
 	<footer class="pie3">
 		<div class="container" align="center">
-			<a style="margin: 20px" href="https://my.jw.org/home/es" target="_blank"><img id="apps" src="https://assets1.jw.org/images/siteMarkApps_mobile.svg">DOMINIO DE LA CONRGEGACIÓN</a>
+			<a style="margin: 20px" href="https://my.jw.org/home/es" target="_blank"><img id="apps" src="https://assets1.jw.org/images/siteMarkApps_mobile.svg">DOMINIO DE LA CONGREGACIÓN</a>
 		</div>
 
 		<br>
