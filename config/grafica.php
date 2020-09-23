@@ -49,18 +49,29 @@
 
 	include "cn.php";
 
-	$sql ="SELECT * FROM enero 
-	INNER JOIN febrero ON enero.id_mes = febrero.id_mes 
-	INNER JOIN marzo ON enero.id_mes = marzo.id_mes 
-	INNER JOIN abril ON enero.id_mes = abril.id_mes 
-	INNER JOIN mayo ON enero.id_mes = mayo.id_mes 
-	INNER JOIN junio ON enero.id_mes = junio.id_mes 
-	INNER JOIN julio ON enero.id_mes = julio.id_mes 
-	INNER JOIN agosto ON enero.id_mes = agosto.id_mes 
-	INNER JOIN septiembre ON enero.id_mes = septiembre.id_mes 
-	INNER JOIN octubre ON enero.id_mes = octubre.id_mes 
-	INNER JOIN noviembre ON enero.id_mes = noviembre.id_mes 
-	INNER JOIN diciembre ON enero.id_mes = diciembre.id_mes";
+	$sql ="SELECT * FROM enero\n"
+
+    . "	INNER JOIN febrero ON enero.id_mes = febrero.id_mes \n"
+
+    . "	INNER JOIN marzo ON enero.id_mes = marzo.id_mes \n"
+
+    . "	INNER JOIN abril ON enero.id_mes = abril.id_mes \n"
+
+    . "	INNER JOIN mayo ON enero.id_mes = mayo.id_mes \n"
+
+    . "	INNER JOIN junio ON enero.id_mes = junio.id_mes \n"
+
+    . "	INNER JOIN julio ON enero.id_mes = julio.id_mes \n"
+
+    . "	INNER JOIN agosto ON enero.id_mes = agosto.id_mes \n"
+
+    . "	INNER JOIN septiembre ON enero.id_mes = septiembre.id_mes \n"
+
+    . "	INNER JOIN octubre ON enero.id_mes = octubre.id_mes \n"
+
+    . "	INNER JOIN noviembre ON enero.id_mes = noviembre.id_mes \n"
+
+    . "	INNER JOIN diciembre ON enero.id_mes = diciembre.id_mes";
 
 	$consulta = mysqli_query ($conexion, $sql);
 
@@ -69,14 +80,14 @@
 	}
 
 	include "cl.php";
-
+//.",".$resultado['publicaciones'].",".$resultado['publicaciones'].",".$resultado['publicaciones'].",".$resultado['publicaciones']
 	?>
 
 	<!-- Contenedor de gráficos -->
 	<div class="container" id="contenedor"></div>
 
 	<script>
-		Highcharts.chart('contenedor', {
+		/*Highcharts.chart('contenedor', {
 			chart: {
 				type: 'column'
 			},
